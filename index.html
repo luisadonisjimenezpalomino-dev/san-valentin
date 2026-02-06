@@ -4,12 +4,9 @@
   <meta charset="UTF-8">
   <title>💖 Mi San Valentín 💖</title>
 
-  <!-- Fuentes -->
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
-    * { box-sizing: border-box; }
-
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
@@ -27,42 +24,18 @@
       font-size: 4em;
       color: #c2185b;
       margin: 0;
-      animation: fadeInDown 1.5s ease;
     }
 
     h2 {
       color: #880e4f;
       font-weight: 400;
       margin-top: 10px;
-      animation: fadeIn 2s ease;
     }
 
     .tulipanes {
-      font-size: 2.8em;
-      margin: 20px 0;
+      font-size: 3em;
+      margin: 25px 0;
       animation: float 3s ease-in-out infinite;
-    }
-
-    .gallery {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      padding: 20px;
-    }
-
-    .gallery img {
-      width: 230px;
-      height: 230px;
-      object-fit: cover;
-      border-radius: 25px;
-      box-shadow: 0 12px 25px rgba(0,0,0,0.25);
-      transition: transform 0.4s, box-shadow 0.4s;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.1) rotate(2deg);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.35);
     }
 
     .card {
@@ -72,20 +45,19 @@
       max-width: 750px;
       border-radius: 30px;
       box-shadow: 0 18px 40px rgba(0,0,0,0.3);
-      animation: fadeInUp 1.5s ease;
     }
 
     .card p {
-      font-size: 1.25em;
+      font-size: 1.3em;
       color: #444;
       line-height: 1.7;
     }
 
     .nombre {
       font-family: 'Great Vibes', cursive;
-      font-size: 2.2em;
+      font-size: 2.4em;
       color: #c2185b;
-      margin: 15px 0;
+      margin: 20px 0;
     }
 
     .btn {
@@ -97,52 +69,27 @@
       background: linear-gradient(135deg, #e91e63, #ad1457);
       color: white;
       cursor: pointer;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-      transition: all 0.3s;
+      transition: 0.3s;
     }
 
     .btn:hover {
       transform: scale(1.15);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.4);
     }
 
     #respuesta {
       margin-top: 30px;
-      font-size: 1.7em;
+      font-size: 1.8em;
       color: #c2185b;
       font-weight: bold;
       display: none;
-      animation: popIn 1s ease;
     }
 
     footer {
       margin-bottom: 30px;
       color: #880e4f;
-      font-size: 1em;
     }
 
-    /* Animaciones */
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-40px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes popIn {
-      0% { transform: scale(0); }
-      80% { transform: scale(1.2); }
-      100% { transform: scale(1); }
-    }
-
+    /* Animación tulipanes */
     @keyframes float {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
@@ -160,11 +107,11 @@
 
     @keyframes floatHeart {
       from {
-        transform: translateY(0) translateX(0);
+        transform: translateY(0);
         opacity: 1;
       }
       to {
-        transform: translateY(-110vh) translateX(50px);
+        transform: translateY(-110vh);
         opacity: 0;
       }
     }
@@ -180,13 +127,6 @@
 
 <div class="tulipanes">
   🌷 🌷 🌷 🌷 🌷
-</div>
-
-<!-- GALERÍA -->
-<div class="gallery">
-  <img src="img/foto1.jpg" alt="Nuestro momento 1">
-  <img src="img/foto2.jpg" alt="Nuestro momento 2">
-  <img src="img/foto3.jpg" alt="Nuestro momento 3">
 </div>
 
 <div class="card">
@@ -206,7 +146,7 @@
     Con todo mi corazón, quiero hacerte una pregunta muy especial…
   </p>
 
-  <p style="font-size:1.4em; color:#ad1457; font-weight:600;">
+  <p style="font-size:1.5em; color:#ad1457; font-weight:600;">
     ¿Me concedes el honor de ser mi San Valentín? 💖🌷
   </p>
 
@@ -241,7 +181,7 @@ setInterval(() => {
   setTimeout(() => {
     heart.remove();
   }, 6000);
-}, 600);
+}, 700);
 </script>
 
 </body>
