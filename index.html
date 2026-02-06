@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>💖 Mi San Valentín 💖</title>
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffb6c1, #ffe4e1);
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 40px 20px 10px;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4em;
+      color: #c2185b;
+      margin: 0;
+      animation: fadeInDown 1.5s ease;
+    }
+
+    h2 {
+      color: #880e4f;
+      font-weight: 400;
+      margin-top: 10px;
+      animation: fadeIn 2s ease;
+    }
+
+    .tulipanes {
+      font-size: 2.8em;
+      margin: 20px 0;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .gallery img {
+      width: 230px;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 25px;
+      box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.1) rotate(2deg);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+    }
+
+    .card {
+      background: white;
+      margin: 30px auto 40px;
+      padding: 35px;
+      max-width: 750px;
+      border-radius: 30px;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.3);
+      animation: fadeInUp 1.5s ease;
+    }
+
+    .card p {
+      font-size: 1.25em;
+      color: #444;
+      line-height: 1.7;
+    }
+
+    .nombre {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.2em;
+      color: #c2185b;
+      margin: 15px 0;
+    }
+
+    .btn {
+      margin-top: 25px;
+      padding: 16px 40px;
+      font-size: 1.4em;
+      border: none;
+      border-radius: 50px;
+      background: linear-gradient(135deg, #e91e63, #ad1457);
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      transition: all 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.15);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+    }
+
+    #respuesta {
+      margin-top: 30px;
+      font-size: 1.7em;
+      color: #c2185b;
+      font-weight: bold;
+      display: none;
+      animation: popIn 1s ease;
+    }
+
+    footer {
+      margin-bottom: 30px;
+      color: #880e4f;
+      font-size: 1em;
+    }
+
+    /* Animaciones */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0); }
+      80% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* Corazones flotando */
+    .heart {
+      position: fixed;
+      bottom: -20px;
+      font-size: 24px;
+      animation: floatHeart 6s linear infinite;
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    @keyframes floatHeart {
+      from {
+        transform: translateY(0) translateX(0);
+        opacity: 1;
+      }
+      to {
+        transform: translateY(-110vh) translateX(50px);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Para Ti 💖</h1>
+  <h2>Porque haces mis días más hermosos</h2>
+</header>
+
+<div class="tulipanes">
+  🌷 🌷 🌷 🌷 🌷
+</div>
+
+<!-- GALERÍA -->
+<div class="gallery">
+  <img src="img/foto1.jpg" alt="Nuestro momento 1">
+  <img src="img/foto2.jpg" alt="Nuestro momento 2">
+  <img src="img/foto3.jpg" alt="Nuestro momento 3">
+</div>
+
+<div class="card">
+  <div class="nombre">Mi amada Talia 💖</div>
+
+  <p>
+    Desde que llegaste a mi vida, todo tiene más luz, más sonrisas  
+    y más razones para agradecer. 💕
+  </p>
+
+  <p>
+    Hoy quiero regalarte estos tulipanes, que representan  
+    lo bonito, puro y especial que siento por ti. 🌷
+  </p>
+
+  <p>
+    Con todo mi corazón, quiero hacerte una pregunta muy especial…
+  </p>
+
+  <p style="font-size:1.4em; color:#ad1457; font-weight:600;">
+    ¿Me concedes el honor de ser mi San Valentín? 💖🌷
+  </p>
+
+  <button class="btn" onclick="mostrarRespuesta()">
+    ¡Sí, acepto! 💘
+  </button>
+
+  <div id="respuesta">
+    ¡SÍIIII! 💕🌷✨  
+    Prometo llenarte de sonrisas, tulipanes y momentos inolvidables 💘
+  </div>
+</div>
+
+<footer>
+  Hecho con todo mi amor 💖 — Para Talia
+</footer>
+
+<script>
+function mostrarRespuesta() {
+  document.getElementById("respuesta").style.display = "block";
+}
+
+// Corazones flotando
+setInterval(() => {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = "💖";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = (20 + Math.random() * 25) + "px";
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 6000);
+}, 600);
+</script>
+
+</body>
+</html>
